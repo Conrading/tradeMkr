@@ -1,0 +1,50 @@
+{
+    "purpose": "show all trademark amount",
+    "jedesState": [
+        {
+            "number": 242283,
+            "geography": "United Arab Emirates",
+            "url": "https://u.ae/en/information-and-services/business/intellectual-property"
+        },
+        {
+            "number": 1914958,
+            "geography": "Australia",
+            "url": "https://www.ipaustralia.gov.au/trade-marks/applying-for-a-trade-mark/searching-trade-marks"
+        },
+        {
+            "number": 1845537,
+            "geography": "Canada",
+            "url": "https://www.ic.gc.ca/app/opic-cipo/trdmrks/srch/home"
+        },
+        {
+            "number": 2294560,
+            "geography": "Germany",
+            "url": "https://www.dpma.de/english/trade_marks/trade_mark_search/index.html"
+        },
+        {
+            "number": 1117208,
+            "geography": "Spain",
+            "url": "https://www.oepm.es/en/signos_distintivos/"
+        },
+        {
+            "number": 3066557,
+            "geography": "France",
+            "url": "https://innovaccess.eu/france/intellectual-property-office-in-france/"
+        },
+        {
+            "number": 5677603,
+            "geography": "Japan",
+            "url": "https://www.jpo.go.jp/e/support/j_platpat/trademark_search.html"
+        },
+        {
+            "number": 1944002,
+            "geography": "Mexico",
+            "url": "https://www.gob.mx/impi/"
+        },
+        {
+            "number": 10087290,
+            "geography": "United States of America",
+            "url": "https://www.uspto.gov/trademarks/search"
+        }
+    ]
+}
