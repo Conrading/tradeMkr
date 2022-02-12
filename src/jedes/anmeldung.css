@@ -25,9 +25,10 @@
 .input-anmeldung {
     border: 0.5px solid rgb(224, 222, 222);
     border-radius: 3px;
+    width: 91%;
     box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
     height: 31px;
-    background-color: beige;
+    background-color: rgb(247, 247, 233);
 }
 .width-control-drei {
     width: 31%;

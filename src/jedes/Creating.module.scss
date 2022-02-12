@@ -1,0 +1,56 @@
+
+  $hover-font-color: rgb(77, 17, 17);
+
+  .dataUpdateTitleFrame {
+      width: 51%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 31px;
+      font-family: serif;
+      font-size: 17px;
+      padding-bottom: 17px;
+      border-bottom: 1px solid aliceblue;
+  }
+  
+  .dataUpdateInputFrame {
+      width: 71%;
+      margin: 0 auto;
+      margin-top: 31px;
+  }
+  .dataUpdateInRow {
+      margin: 7px;
+      display: flex;
+      flex-direction: row;
+  }
+  .dataUpdateInputDataObject {
+      height: 100%;
+      padding: 7px;
+      width: 17%;
+  }
+  .dataUpdateInputDataContent {
+      border: 1px solid darkkhaki;
+      border-radius: 3px;
+      width: 71%;
+  }
+  .dataUpdateInputRemark {
+      height: 100%;
+  }
+  .dataUpdateSubmit {
+      margin: 3px;
+      padding: 17px;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 23px;
+      cursor: pointer;
+    
+      &:hover {
+        color: $hover-font-color;
+        font-weight: 600;
+      }
+      &:active {
+        border: 1px solid rgb(189, 129, 121);
+        border-radius: 7px;
+        color: $hover-font-color;
+        transform: translateY(2px);
+      }
+  }

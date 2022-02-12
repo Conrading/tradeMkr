@@ -69,11 +69,6 @@ $box-shadow: 0 3px 3px 0 blue;
 }
 
 
-.textPointer {
-    cursor: pointer;
-  
-    &:hover {
-      color: $hover-font-color;
-      font-weight: 600;
-    }
-  }
+.textcenter {
+    text-align: center;
+}

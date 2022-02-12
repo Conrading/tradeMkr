@@ -14,7 +14,8 @@ class Anmeldung extends Component {
         this.anmelden = this.anmelden.bind(this)
     }
     anmelden () {
-        //send password to back
+        alert("once you sign in, you can add the trademark you want, currently it is there withou/without login anyway")
+        /*
         const konto = [{ 
             "user": this.state.userInput,
             "password": this.state.codeInput 
@@ -38,6 +39,7 @@ class Anmeldung extends Component {
                 codeInput: null,
             })
         }
+        */
     }
     render () {
         return (
@@ -45,7 +47,7 @@ class Anmeldung extends Component {
                 <br />
                 <div className="block-anmeldung">
                     <div className="text-center logo-anmeldung gap-upper">
-                        <div className="text-anmeldung-title">HugoMode</div>
+                        <div className="text-anmeldung-title">makrTrade</div>
                     </div>
                     <div className="text-center">
                         <input type="text" placeholder="Account" className="input-anmeldung" onChange={(e) => {this.setState({ userInput: e.target.value })}}/>
@@ -63,7 +65,9 @@ class Anmeldung extends Component {
                 <br />
                 <div className="block-anmeldung">
                     <div className="sign-up-text">Not yet registered? 
-                        <div className="sign-up-load-linnk text-pointer" onClick={() => {window.location = '/mitgliedbearbeiten/id=register'}}>Sign up</div>
+                        <div className="sign-up-load-linnk text-pointer" onClick={() => {
+                            //window.location = '/mitgliedbearbeiten/id=register'
+                            }}>Sign up</div>
                     </div>
                 </div>
                 <br />

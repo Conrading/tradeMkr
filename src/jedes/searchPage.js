@@ -5,6 +5,7 @@ import style from './SearchPage.module.scss'
 
 function SearchPage () {
     const [searchTextInput, setSearchTextInput] = useState(null)
+    const [searchResult, setSearchResult] = useState (false)
     useEffect (() => {
         window.addEventListener("keydown", searchTextUpdate);
         return () => {
@@ -15,8 +16,9 @@ function SearchPage () {
     function searchTextUpdate (e) {
         setSearchTextInput(e.target.value)
         if (e.key === "Enter")  {
+            setSearchResult(true)
             e.preventDefault()
-            alert("search key word is: " + searchTextInput)
+            alert("you are searching: " + searchTextInput + ", but currently there is no database" )
         }
     }
     return (
@@ -69,6 +71,8 @@ function SearchPage () {
                     </div>
                 </div>
             </div>
+            <br />
+            {searchResult === true &&<div className={style.textcenter}>once link with database, you can search trademark you add before, and show the result here</div>}
         </div>
     </div>)
 }

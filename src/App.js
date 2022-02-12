@@ -6,6 +6,7 @@ import MainPage from './jedes/mainPage'
 import Search from './jedes/searchPage'
 import Anmeldung from './jedes/anmeldung'
 import Mitgliedbearbeiten from './jedes/mitgliedbearbeiten'
+import Creating from './jedes/create'
 
 class MainFrame extends Component {
   constructor () {
@@ -62,6 +63,7 @@ class MainFrame extends Component {
           </div>*/}
           <div className="title-row">
             <div className="width-option text-pointer title-text" onClick={() => {window.location = '/search'}}>Search</div>
+            <div className="width-option text-pointer title-text" onClick={() => {window.location = '/create'}}>Create</div>
             {this.state.logStauts === "Log-in" && <div className="width-option text-pointer title-text" onClick={() => {window.location = '/anmeldung'}}>{this.state.logStauts}</div>}
             {this.state.logStauts === "@" && <div className="width-option text-pointer title-text" onClick={() => {window.location = `/mitglied/id=${localStorage.getItem('user')}`}}>{this.state.logStauts}</div>}
           </div>
@@ -70,6 +72,7 @@ class MainFrame extends Component {
           <Route path='/' element={<MainPage/>} />
           <Route path='/anmeldung' element={<Anmeldung/>} />
           <Route path='/search' element={<Search/>} />
+          <Route path='/create' element={<Creating/>} />
           <Route path='/mitgliedbearbeiten/id=:kontoname' element={<Mitgliedbearbeiten />}/> {/*render={(props) => <Mitgliedbearbeiten {...props}/>} */}
         </Routes>
         <br />
