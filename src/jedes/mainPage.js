@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from './MainPage.module.scss'
-import http from './http-axios'
+import './MainPage.scss'
+//import http from './http-axios'
 import loadDefault from './jedesMakr.json'
 
 
@@ -48,10 +49,40 @@ function MainPage () {
         )
       }
     })
+    let loadGraphicWork = loadDefault.jedesState.map(h => {
+      //const cx = (...classNames) => classNames.join(' ');
+      if (stateName !== null) {
+        let jsonobject = JSON.parse(stateName)
+        let populationNumer = jsonobject.map(f => {
+          if(f.name === h.geography) {
+            let dividedNumer = (h.number / f.population)
+            var obg = 1000 * (dividedNumer.toFixed(5))
+            var contry = parseInt(obg) + "px"
+            /*var elem = document.getElementById('para');
+            elem.style.width = obg.toFixed(1) + "px";*/
+            return (
+              <div>
+                <div className="homePageBarName" >{h.geography} has index: {obg.toFixed(1)}</div>
+                <div className="homePageBarItself" style={{width: contry.toString()}}>.</div>
+              </div>
+            )
+          } 
+        })
+        return (
+          <div>
+            <div>{populationNumer}</div>
+          </div>
+        )
+      }
+    })
     return (
         <div className={style.homePageFrame}>
             <div className={style.homePageTitle}>Trademark the world</div>
             <div className={style.homePageFrameGrid}>{loadInitialFile}</div>
+            <div className={style.homePageGraphicArea}>
+              <div className={style.homePageStatisticsTitle}>- Mark Statistics -</div>
+              <div>{loadGraphicWork}</div>
+            </div>
         </div>
     )
 }

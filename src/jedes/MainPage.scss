@@ -1,0 +1,65 @@
+
+.homePageBarName {
+  margin-top: 17px;
+}
+.homePageBarItself {
+  width: 5px;
+  background-color: #994f3d;
+}
+
+
+$defaultWidth: 5px;
+.homePagePercentage {
+    font-size: .8em;
+    line-height: 1;
+    width: 100%;
+    height: 40px;
+    background: repeating-linear-gradient(
+    to right,
+    #ddd,
+    #ddd 1px,
+    #fff 1px,
+    #fff 5%
+  );
+    
+    &:after {
+      content: "";
+      display: block;
+      background-color: #994f3d;
+      width: $defaultWidth;
+      margin-bottom: 10px;
+      height: 31%;
+      position: relative;
+      bottom: 50%;
+      transform: translateY(-50%);
+      transition: background-color .3s ease;
+      cursor: pointer;
+    }
+    &:hover,
+    &:focus {
+      &:after {
+         background-color: #aaa; 
+      }
+    }
+  }
+  
+  @for $i from 1 through 100 {
+    .homePagePercentage-#{$i} {
+      font-size: .8em;
+      line-height: 1;
+      width: 100%;
+      height: 40px;
+      background: repeating-linear-gradient(
+      to right,
+      #ddd,
+      #ddd 1px,
+      #fff 1px,
+      #fff 5%
+    );
+      &:after {
+        $value: ($i * 1);
+        width: $value;
+      }
+    }
+  }
+  
