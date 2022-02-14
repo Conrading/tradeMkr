@@ -56,24 +56,24 @@ class MainFrame extends Component {
       <Router>
       <body className="main-frame-tighten">
         <div className="title-row separate-two-side title-bottom-linie">
-          <div className="title-text text-pointer" onClick={() => {window.location = `/`}}>makrTrade</div>
+          <div className="title-text text-pointer" onClick={() => {window.location = `/tradeMkr/`}}>makrTrade</div>
           {/*<div className="title-row">
               <div><input className="searchbar-input-project" type="text" onChange={(e) => {this.setState({projectSearch: e.target.value})}}/></div>
               <div><button className="search" onClick={() => {this.sortOutData()}}>Search</button></div>
           </div>*/}
           <div className="title-row">
-            <div className="width-option text-pointer title-text" onClick={() => {window.location = '/search'}}>Search</div>
-            <div className="width-option text-pointer title-text" onClick={() => {window.location = '/create'}}>Create</div>
-            {this.state.logStauts === "Log-in" && <div className="width-option text-pointer title-text" onClick={() => {window.location = '/anmeldung'}}>{this.state.logStauts}</div>}
+            <div className="width-option text-pointer title-text" onClick={() => {window.location = '/tradeMkr/search'}}>Search</div>
+            <div className="width-option text-pointer title-text" onClick={() => {window.location = '/tradeMkr/create'}}>Create</div>
+            {this.state.logStauts === "Log-in" && <div className="width-option text-pointer title-text" onClick={() => {window.location = '/tradeMkr/anmeldung'}}>{this.state.logStauts}</div>}
             {this.state.logStauts === "@" && <div className="width-option text-pointer title-text" onClick={() => {window.location = `/mitglied/id=${localStorage.getItem('user')}`}}>{this.state.logStauts}</div>}
           </div>
         </div>
         <Routes>
-          <Route path='/' element={<MainPage/>} />
-          <Route path='/anmeldung' element={<Anmeldung/>} />
-          <Route path='/search' element={<Search/>} />
-          <Route path='/create' element={<Creating/>} />
-          <Route path='/mitgliedbearbeiten/id=:kontoname' element={<Mitgliedbearbeiten />}/> {/*render={(props) => <Mitgliedbearbeiten {...props}/>} */}
+          <Route path='/tradeMkr/' element={<MainPage/>} />
+          <Route path='/tradeMkr/anmeldung' element={<Anmeldung/>} />
+          <Route path='/tradeMkr/search' element={<Search/>} />
+          <Route path='/tradeMkr/create' element={<Creating/>} />
+          <Route path='/tradeMkr/mitgliedbearbeiten/id=:kontoname' element={<Mitgliedbearbeiten />}/> {/*render={(props) => <Mitgliedbearbeiten {...props}/>} */}
         </Routes>
         <br />
         <div className="boden-text">
